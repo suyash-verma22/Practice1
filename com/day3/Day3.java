@@ -54,6 +54,34 @@ public class Day3 {
 		
 		System.out.println("Max = " + max);
 	}
+	
+	public static void bubbleSort() {
+		System.out.print("Enter array size: ");
+		int n = scanner.nextInt();
+		int array[] = new int[n];
+		for(int i=0;i<n;i++) {
+			array[i] = scanner.nextInt();
+		}
+		
+		for(int i=0;i<n-1;i++) {
+			System.out.println(i+1 +"th -> ");
+			for(int j=0;j<n-i-1;j++) {
+				if(array[j]>array[j+1]) {
+					int temp = array[j+1];
+					array[j+1]=array[j];
+					array[j]=temp;
+				}
+			}
+			for(int data:array) {
+				System.out.print(data + " ");
+			}
+			System.out.println();
+		}
+		System.out.println("Final array -> ");
+		for(int data:array) {
+			System.out.print(data + " ");
+		}
+	}
 
 
 }
